@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .profile-card {
+      background-color: white;
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .name {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    .bio {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+    <div class="name"></div>
+    <h2>{{users['age']}}</h2>
+    <div class="bio">
+      Hi there! I'm John, a web developer who loves coding and coffee.
+
+      
+    </div>
+    <a href="/"><button>go to index</button></a>
+  </div>
+</body>
+</html>

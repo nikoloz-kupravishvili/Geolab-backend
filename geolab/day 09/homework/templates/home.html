@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+
+
+<p style="color: #555; line-height: 1.6; font-size: 36px;display: flex; transform: translateX(7in);">usernames list:</p>
+<div class="row">
+{% for profile in profiles %}
+
+<div style="width: 200px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; font-family: Arial, sans-serif; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  transform: translateX(7in); ">
+    <img src="/static/images/{{ profile['image'] }}" alt="Profile Image" style="width: 150px; height: 150px; object-fit: cover;">
+    <div style="padding: 15px;">
+        <h3 style="margin: 0; font-size: 18px; color: #333;">{{ profile['name'] }}</h3>
+        <p style="margin: 5px 0 0; font-size: 14px; color: #777;">{{ profile['surname'] }}</p>
+
+    </div>
+     <div style="padding: 0 15px 15px; text-align: right;">
+        <a href="/profile/{{ profile['username'] }}"><button style="background-color: #3498db; color: #fff; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer; width: 100%;">
+           Go To Profile
+        </button></a>
+    </div>
+</div>
+
+{% endfor %}
+</div>
+
+
+{%endblock%}

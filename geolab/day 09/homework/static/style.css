@@ -1,0 +1,16 @@
+body{
+            background-color: rgba(216, 186, 65, 0.346);
+        }
+        h1{
+            margin-top: 10%;
+        }
+        img{
+            border-radius: 50%;
+            border: 1px solid black;
+            height: 200px;
+            width: 200px;
+        }
+        h2{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 50px;
+        }

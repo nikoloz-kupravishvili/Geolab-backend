@@ -1,0 +1,21 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jinja</title>
+</head>
+<body>
+    {% block content %}
+     <center>
+        <h1>Hello {{ profiles['name'] }}  {{ profiles['surname'] }}</h1>
+        <img src="/static/images/{{profiles['image']}}" class="img-fluid" alt="username image">
+        <h2>you are the best brainrot <3</h2>
+
+        <a href="/"><button type="button" class="btn btn-primary" id="btn">Home</button></a>
+    </center>
+    {% endblock %}
+</body>
+</html>

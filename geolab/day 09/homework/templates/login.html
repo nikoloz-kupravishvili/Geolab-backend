@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+    <div class="input-group mb-3"
+        style="width: 50%; transform: translateX(50%) translateY(3in);  padding-inline-end: 50px;">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+            aria-describedby="basic-addon1" id="MYunameid" list="usernames">
+        <datalist id="usernames">
+            <option value="balerina777">
+            <option value="sahuuurr">
+            <option value="b0mbord1lo">
+            <option value="lirili_larilashvili">
+        </datalist>
+        <button type="button" class="btn btn-primary" id="MYbtn">Log in</button>
+        <br>
+        
+        <script src="/static/app.js" defer></script>
+       
+    </div>
+{%endblock%}
