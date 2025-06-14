@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    {%for profile in profiles %}
+    <div class="mb-3 row">
+        <h5>{{ profile['username'] }}</h5>
+    </div>
+    <div class="mb-3 row">
+        <h5>{{ profile['gender'] }}</h5>
+    </div>
+    <div class="mb-3 row">
+        <h5>{{ profile['country'] }}</h5>
+    </div>
+    <div class="mb-3 row">
+        <h5>/static/images/{{ profile['image'] }}</h5>
+    </div>
+    {%endfor%}
+</div>
+{% endblock %}

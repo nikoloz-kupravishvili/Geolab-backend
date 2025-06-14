@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title%} Registration Page {% endblock %}
+
+{% block content %}
+<form class="m-5" method="post" enctype="multipart/form-data">
+    {{form.hidden_tag()}}
+
+   
+        {% for errors in form.errors.values()%}
+
+        {% for error in errors %}
+         <div class="alert-danger alert">
+        {{error}}
+        </div>
+        {%endfor%}
+
+        {%endfor%}
+    
+
+    <div class="mb-3 row">
+        {{form.image.label}}
+        {{form.image(class = 'form-control')}}
+
+    </div>
+    <div class="mb-3 row">
+
+        {{form.username(class = 'form-control',placeholder = form.username.label.text )}}
+
+    </div>
+
+
+    <div class="mb-3 row">
+
+        {{form.password(class = 'form-control',placeholder = form.password.label.text)}}
+    </div>
+
+    <div class="mb-3 row">
+        {{form.confirmPassword(class = 'form-control',placeholder = form.confirmPassword.label.text)}}
+    </div>
+
+    <div class="mb-3 row">
+        {{form.birthdate(class = 'form-control',placeholder = form.birthdate.label.text)}}
+    </div>
+
+
+    <div class="mb-3 row">
+        {{form.number(class = 'form-control',placeholder = form.number.label.text)}}
+    </div>
+
+
+    <div class="mb-3 row">
+        {{form.gender.label}}
+        {{form.gender(class = 'form-control')}}
+    </div>
+
+
+    <div class="mb-3 row">
+        {{form.country(class = 'form-control',placeholder = form.country.label.text)}}
+    </div>
+    <div class="btn-group">
+        {{form.submit(class = 'form-control btn-success',placeholder = form.submit.label.text)}}
+    </div>
+</form>
+{% endblock %}
